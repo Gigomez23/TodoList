@@ -11,7 +11,7 @@ import org.openxava.util.*;
 public class ToDoList {
 
 	public static void main(String[] args) throws Exception {
-		DBServer.start("ToDoList-db"); // Para usar tu propia base de datos comenta esta línea y configura src/main/webapp/META-INF/context.xml
+		//DBServer.start("ToDoList-db"); // Para usar tu propia base de datos comenta esta línea y configura src/main/webapp/META-INF/context.xml
 		AppServer.run("ToDoList"); // Usa AppServer.run("") para funcionar en el contexto raíz
 	}
 
