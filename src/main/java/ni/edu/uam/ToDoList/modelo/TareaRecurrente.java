@@ -1,4 +1,5 @@
 package ni.edu.uam.ToDoList.modelo;
 
-public class TareaRecurrente {
+public class TareaRecurrente extends Tarea{
+
 }
