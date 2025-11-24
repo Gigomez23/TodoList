@@ -1,4 +1,4 @@
 package ni.edu.uam.ToDoList.modelo;
 
-public class TareaUnica {
+public class TareaUnica extends Tarea{
 }
