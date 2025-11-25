@@ -3,17 +3,20 @@ package ni.edu.uam.ToDoList.modelo;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
-import org.openxava.annotations.DateTime;
+import org.openxava.annotations.DefaultValueCalculator;
 import org.openxava.annotations.Hidden;
+import org.openxava.annotations.ListProperties;
 import org.openxava.annotations.Required;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import org.openxava.calculators.CurrentLocalDateCalculator;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -30,18 +33,32 @@ public class Tarea {
     @Size(min = 3, max = 60)
     private String titulo;
 
-    @Column(name = "descripcion_tarea", length = 60, nullable = true)
-    @Size(min = 3, max = 60)
+    @Column(name = "descripcion_tarea", length = 255, nullable = true)
+    @Size(min = 3, max = 255)
     private String descripcion;
 
-    @Column(name = "prioridad_tarea", length = 60, nullable = false)
+    @Column(name = "prioridad_tarea", nullable = false)
     @Required(message = "El titulo de la tarea no puede quedar vacio")
-    @Size(min = 3, max = 60)
+//    @Size(min = 3, max = 60)
+    @Min(1)
+    @Max(5)
     private int prioridad;
 
-    @Column(name = "estado_tarea", length=6, nullable = false)
-    private int estado;
+    @Enumerated(EnumType.STRING) // Maps enum name (e.g., "PENDIENTE") to VARCHAR column
+    @Column(name = "estado_tarea", length = 30, nullable = false) // Increased length for String
+    private EstadoTarea estado;
 
+    @Required
+    @DefaultValueCalculator(CurrentLocalDateCalculator.class) // Fecha actual
+    @Column(name = "fecha_vencimiento_tarea", nullable = false)
+    private LocalDate fechaVencimiento;
 
-    private LocalTime fechaVencimiento;
+    @ManyToMany
+    @JoinTable(
+            name = "tarea_etiqueta",
+            joinColumns = @JoinColumn(name = "tarea_oid", referencedColumnName = "oid"),
+            inverseJoinColumns = @JoinColumn(name = "etiqueta_oid", referencedColumnName = "oid")
+    )
+    @ListProperties("nombre, color")
+    private List<Etiqueta> etiquetas;
 }
