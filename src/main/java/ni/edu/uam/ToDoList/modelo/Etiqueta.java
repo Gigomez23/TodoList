@@ -1,20 +1,21 @@
 package ni.edu.uam.ToDoList.modelo;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.openxava.annotations.Hidden;
+import org.openxava.annotations.ListProperties;
+import org.openxava.annotations.ReadOnly;
 import org.openxava.annotations.Required;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
+@Table(name = "etiquetas")
 public class Etiqueta {
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -32,5 +33,8 @@ public class Etiqueta {
     @Size(min = 3, max = 60)
     private String color;
 
-
+    @ManyToMany(mappedBy = "etiquetas")
+    @ReadOnly
+    @ListProperties("titulo, descripcion") // or "id, titulo" if you want an id column shown
+    private List<Tarea> tareas;
 }
