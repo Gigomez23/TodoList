@@ -14,4 +14,5 @@ import javax.persistence.Table;
 })
 public class TareaUnica extends Tarea {
 
+
 }
