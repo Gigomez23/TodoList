@@ -9,9 +9,7 @@ public enum EstadoTarea {
     COMPLETADA(3, "Completada"),
     CANCELADA(4, "Cancelada");
 
-    // Value to be stored in the database
     private final int codigo;
-    // Human-readable description
     private final String descripcion;
 
     EstadoTarea(int codigo, String descripcion) {
