@@ -20,5 +20,11 @@
                 clase="acciones.CrearProfesor"/>        
     </controlador>
     -->
+    <controlador nombre="ReporteTareaRecurrente">
+        <accion nombre="reporte" clase="ni.edu.uam.ToDoList.acciones.ReporteTareaRecurrente"
+                icono="xava/images/print.gif"
+                modo="list"
+                descripcion="Generar reporte de tareas recurrentes"/>
+    </controlador>
     
 </controladores>

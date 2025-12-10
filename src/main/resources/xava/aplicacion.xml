@@ -25,6 +25,11 @@
 			<modelo nombre="Tarea"/>
 			<controlador nombre="Tarea"/>
 		</modulo>
+    <modulo nombre="TareaRecurrente">
+        <modelo nombre="TareaRecurrente"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteTareaRecurrente"/>
+    </modulo>
 		
 </aplicacion>
 
