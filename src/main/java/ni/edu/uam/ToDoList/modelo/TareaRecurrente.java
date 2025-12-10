@@ -1,6 +1,9 @@
 package ni.edu.uam.ToDoList.modelo;
 
 import lombok.*;
+import org.openxava.annotations.View;
+import org.openxava.annotations.Views;
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
