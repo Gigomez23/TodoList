@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE aplicacion SYSTEM "dtds/aplicacion.dtd">
+
+<aplicacion nombre="ToDoList"> 
+
+	<!--
+	Un módulo por defecto se asume para cada
+	controlador en <modulo-defecto/>
+	-->
+	<modulo-defecto>
+		<controlador nombre="Typical"/>
+	</modulo-defecto>
+
+	<!--todo: fix Tarea module para que no de error-->
+
+	<!--
+	Podemos definir módulos adicionales, por ejemplo: 	
+	<modulo nombre="ProfesorSoloLectura">
+		<modelo nombre="Profesor"/>
+		<controlador nombre="Print"/>
+	</modulo>		
+	-->
+    <modulo nombre="Etiqueta">
+        <modelo nombre="Etiqueta"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteEtiqueta"/>
+    </modulo>
+    <modulo nombre="TareaRecurrente">
+        <modelo nombre="TareaRecurrente"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteTareaRecurrente"/>
+    </modulo>
+    <modulo nombre="TareaUnica">
+        <modelo nombre="TareaUnica"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteTareaUnica"/>
+    </modulo>
+    <modulo nombre="TareaUrgente">
+        <modelo nombre="TareaUrgente"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteTareaUrgente"/>
+    </modulo>
+    <!--
+    <modulo nombre="Tarea" modelo="Tarea">
+        <controladores nombre="Typical"/>
+    </modulo>
+    -->
+
+</aplicacion>
+

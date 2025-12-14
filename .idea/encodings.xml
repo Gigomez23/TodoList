@@ -3,5 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/reports/Etiqueta.jrxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/reports/Etiquetas.jrxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/reports/TareaRecurrente.jrxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/reports/TareaUnica.jrxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/reports/TareaUrgente.jrxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/reports/Tareas.jrxml" charset="UTF-8" />
   </component>
 </project>

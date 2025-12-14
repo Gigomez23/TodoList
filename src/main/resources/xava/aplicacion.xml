@@ -21,10 +21,31 @@
 		<controlador nombre="Print"/>
 	</modulo>		
 	-->
-		<modulo nombre="Tareas">
-			<modelo nombre="Tarea"/>
-			<controlador nombre="Tarea"/>
-		</modulo>
-		
+    <modulo nombre="Etiqueta">
+        <modelo nombre="Etiqueta"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteEtiqueta"/>
+    </modulo>
+    <modulo nombre="TareaRecurrente">
+        <modelo nombre="TareaRecurrente"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteTareaRecurrente"/>
+    </modulo>
+    <modulo nombre="TareaUnica">
+        <modelo nombre="TareaUnica"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteTareaUnica"/>
+    </modulo>
+    <modulo nombre="TareaUrgente">
+        <modelo nombre="TareaUrgente"/>
+        <controlador nombre="Typical"/>
+        <controlador nombre="ReporteTareaUrgente"/>
+    </modulo>
+    <!--
+    <modulo nombre="Tarea" modelo="Tarea">
+        <controladores nombre="Typical"/>
+    </modulo>
+    -->
+
 </aplicacion>
 
