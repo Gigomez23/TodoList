@@ -3,7 +3,6 @@ package ni.edu.uam.ToDoList.acciones;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import ni.edu.uam.ToDoList.modelo.Reporte;
 import ni.edu.uam.ToDoList.modelo.TareaRecurrente;
 import org.openxava.actions.JasperReportBaseAction;
 import org.openxava.annotations.Required;
