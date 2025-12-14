@@ -20,59 +20,11 @@
                 clase="acciones.CrearProfesor"/>        
     </controlador>
     -->
-    <controlador nombre="ReporteEtiquetas">
-        <accion nombre="ImprimirEtiquetas"
-                clase="ni.edu.uam.ToDoList.acciones.ReporteEtiqueta"
-                icono="report.png"
-                etiqueta="Reporte"
-                modo="list"/>
-    </controlador>
-    <controlador nombre="ReporteTareaRecurrente">
-        <accion nombre="ImprimirTareaRecurrente"
-                clase="ni.edu.uam.ToDoList.acciones.ReporteTareaRecurrente"
-                icono="report.png"
-                etiqueta="Reporte"
-                modo="list"/>
-    </controlador>
-    <controlador nombre="ReporteTareaUnica">
-        <accion nombre="ImprimirTareaUnica"
-                clase="ni.edu.uam.ToDoList.acciones.ReporteTareaUnica"
-                icono="report.png"
-                etiqueta="Reporte"
-                modo="list"/>
-    </controlador>
-    <controlador nombre="ReporteTareaUrgente">
-        <accion nombre="ImprimirTareaUrgente"
-                clase="ni.edu.uam.ToDoList.acciones.ReporteTareaUrgente"
-                icono="report.png"
-                etiqueta="Reporte"
-                modo="list"/>
-    </controlador>
-    <controlador nombre="ReporteEtiquetas">
-        <accion nombre="reporte" clase="ni.edu.uam.ToDoList.acciones.ReporteEtiquetas"
-                icono="xava/images/print.gif"
-                modo="list"
-                descripcion="Generar reporte de etiquetas"/>
-    </controlador>
     <controlador nombre="ReporteTareaRecurrente">
         <accion nombre="reporte" clase="ni.edu.uam.ToDoList.acciones.ReporteTareaRecurrente"
                 icono="xava/images/print.gif"
                 modo="list"
                 descripcion="Generar reporte de tareas recurrentes"/>
     </controlador>
-    <controlador nombre="ReporteTareaUnica">
-        <accion nombre="reporte" clase="ni.edu.uam.ToDoList.acciones.ReporteTareaUnica"
-                icono="xava/images/print.gif"
-                modo="list"
-                descripcion="Generar reporte de tareas unicas"/>
-    </controlador>
-    <controlador nombre="ReporteTareaUrgente">
-        <accion nombre="reporte"
-                clase="ni.edu.uam.ToDoList.acciones.ReporteTareaUrgente"
-                icono="xava/images/print.gif"
-                modo="list"
-                descripcion="Generar reporte de tareas urgentes"/>
-    </controlador>
-
-
+    
 </controladores>
