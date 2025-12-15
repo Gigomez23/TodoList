@@ -7,6 +7,7 @@ import org.openxava.annotations.Views;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Getter @Setter
@@ -21,6 +22,11 @@ public class TareaUrgente extends Tarea {
 
     @Column(name="hora_limite")
     private LocalTime horaLimite;
+
+    public String getHoraLimiteAsString() {
+        if (horaLimite == null) return "";
+        return horaLimite.format(DateTimeFormatter.ofPattern("HH:mm"));
+    }
 
     @Column(length = 255)
     @Size(min = 3, max = 255)

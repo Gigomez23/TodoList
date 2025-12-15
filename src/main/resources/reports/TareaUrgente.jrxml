@@ -1,117 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TareaUrgente" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45e0b0c2-f316-414b-bdf0-5e685a5cbd39">
-	<queryString>
-		<![CDATA[]]>
-	</queryString>
-	<field name="descripcion" class="java.lang.String"/>
-	<field name="fechaVencimiento" class="LocalTime"/>
-	<field name="cantidad" class="java.math.BigDecimal"/>
-	<background>
-		<band splitType="Stretch"/>
-	</background>
-	<title>
-		<band height="79" splitType="Stretch">
-			<staticText>
-				<reportElement x="192" y="30" width="170" height="30" uuid="b0e9666e-4110-4396-9a6e-dc2b1434388a">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
-				<textElement>
-					<font fontName="Farah" size="21"/>
-				</textElement>
-				<text><![CDATA[Reporte de Tareas]]></text>
-			</staticText>
-		</band>
-	</title>
-	<pageHeader>
-		<band height="40" splitType="Stretch">
-			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="150" y="10" width="130" height="30" uuid="c4630c11-4b1e-4939-abf3-f2ff5fcd1401"/>
-				<textElement>
-					<font size="12"/>
-				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
-			<textField pattern="HH:mm">
-				<reportElement x="405" y="10" width="140" height="30" uuid="b408432b-8392-43d0-bcdd-034372be8d41"/>
-				<textElement>
-					<font size="12"/>
-				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="40" y="10" width="100" height="30" uuid="d7baee6e-6034-4cbe-835c-989a629b1bc2"/>
-				<text><![CDATA[Fecha:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="290" y="10" width="100" height="30" uuid="145b4241-e433-438b-9098-72887f1b6eeb"/>
-				<text><![CDATA[Hora:]]></text>
-			</staticText>
-			<line>
-				<reportElement x="-20" y="1" width="595" height="1" uuid="e96b9e54-e036-4d39-9895-62fe3ef53b7c"/>
-			</line>
-		</band>
-	</pageHeader>
-	<columnHeader>
-		<band height="66" splitType="Stretch">
-			<staticText>
-				<reportElement x="40" y="20" width="100" height="30" uuid="daa5fbe5-65b2-4d94-b4f5-a9f223dd48f1"/>
-				<textElement>
-					<font size="14"/>
-				</textElement>
-				<text><![CDATA[Descripción]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="260" y="22" width="47" height="30" uuid="adaf4aa6-8587-4242-9c7f-c3df58ef3b1e"/>
-				<textElement>
-					<font size="14"/>
-				</textElement>
-				<text><![CDATA[Fecha]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="425" y="19" width="100" height="30" uuid="556dd9e1-863a-4f68-89da-47c77d376a45"/>
-				<textElement>
-					<font size="14"/>
-				</textElement>
-				<text><![CDATA[Cantidad]]></text>
-			</staticText>
-			<line>
-				<reportElement x="-20" y="0" width="595" height="1" uuid="8860318a-b659-4937-8ec2-19545b168623"/>
-			</line>
-			<line>
-				<reportElement x="180" y="1" width="1" height="60" uuid="67de4309-3ab2-443d-9a96-6abc03c06d98"/>
-			</line>
-			<line>
-				<reportElement x="380" y="0" width="1" height="60" uuid="1a5f997c-67c9-49fb-988e-f9c60701ea5a"/>
-			</line>
-		</band>
-	</columnHeader>
-	<detail>
-		<band height="125" splitType="Stretch">
-			<textField>
-				<reportElement x="43" y="25" width="100" height="30" uuid="7d6d1c44-9586-4aeb-bf83-5972d9de2c37"/>
-				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="233" y="20" width="100" height="30" uuid="cb0867f1-6368-40d4-ac3f-a959c72ffde0"/>
-				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="425" y="20" width="100" height="30" uuid="ea7506d1-53a6-4c6a-8a5d-ff8e9aa7f469"/>
-				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
-			</textField>
-			<line>
-				<reportElement x="-20" y="0" width="595" height="1" uuid="a3ce82d2-e18f-4d3c-b393-0c14afd2a346"/>
-			</line>
-		</band>
-	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
-	<pageFooter>
-		<band height="54" splitType="Stretch"/>
-	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="descripcion" class="java.lang.String"/>
+    <field name="fechaVencimiento" class="java.time.LocalDate"/>
+    <field name="titulo" class="java.lang.String"/>
+    <field name="prioridad" class="java.lang.Integer"/>
+    <field name="estadoAsString" class="java.lang.String"/>
+    <field name="horaLimiteAsString" class="java.lang.String"/>
+    <field name="razonUrgencia" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="244" y="30" width="78" height="30" uuid="b0e9666e-4110-4396-9a6e-dc2b1434388a">
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Farah" size="21"/>
+                </textElement>
+                <text><![CDATA[Reporte]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="40" splitType="Stretch">
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="150" y="10" width="130" height="30" uuid="c4630c11-4b1e-4939-abf3-f2ff5fcd1401"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <textField pattern="HH:mm">
+                <reportElement x="405" y="10" width="140" height="30" uuid="b408432b-8392-43d0-bcdd-034372be8d41"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="40" y="10" width="100" height="30" uuid="d7baee6e-6034-4cbe-835c-989a629b1bc2"/>
+                <text><![CDATA[Fecha:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="290" y="10" width="100" height="30" uuid="145b4241-e433-438b-9098-72887f1b6eeb"/>
+                <text><![CDATA[Hora:]]></text>
+            </staticText>
+            <line>
+                <reportElement x="-20" y="1" width="595" height="1" uuid="e96b9e54-e036-4d39-9895-62fe3ef53b7c"/>
+            </line>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="69" splitType="Stretch">
+            <staticText>
+                <reportElement x="60" y="18" width="80" height="30" uuid="daa5fbe5-65b2-4d94-b4f5-a9f223dd48f1"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Descripción]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="300" y="15" width="90" height="30" uuid="adaf4aa6-8587-4242-9c7f-c3df58ef3b1e"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Fecha Vencimiento]]></text>
+            </staticText>
+            <line>
+                <reportElement x="-20" y="0" width="595" height="1" uuid="8860318a-b659-4937-8ec2-19545b168623"/>
+            </line>
+            <line>
+                <reportElement x="140" y="5" width="1" height="60" uuid="67de4309-3ab2-443d-9a96-6abc03c06d98"/>
+            </line>
+            <line>
+                <reportElement x="404" y="0" width="1" height="60" uuid="1a5f997c-67c9-49fb-988e-f9c60701ea5a"/>
+            </line>
+            <line>
+                <reportElement x="50" y="3" width="1" height="60" uuid="f45884d3-abc4-4333-bcb8-055b632b4412"/>
+            </line>
+            <staticText>
+                <reportElement x="-10" y="20" width="45" height="30" uuid="8c077d21-eb4d-490f-938c-ece1a643b826"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Titulo]]></text>
+            </staticText>
+            <line>
+                <reportElement x="220" y="3" width="1" height="60" uuid="01d92cea-844a-4d0e-846a-3a88c5f84cdd"/>
+            </line>
+            <staticText>
+                <reportElement x="151" y="18" width="60" height="30" uuid="32d29e5e-cb43-4d2c-a24f-f90edb10bda7"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Prioridad]]></text>
+            </staticText>
+            <line>
+                <reportElement x="290" y="0" width="1" height="60" uuid="01071852-56a2-4e41-89f7-72cc15685211"/>
+            </line>
+            <staticText>
+                <reportElement x="230" y="20" width="53" height="30" uuid="c7cdf62f-ff8f-4c0b-bb4f-4d1d0eade0f6"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Estado]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="420" y="18" width="60" height="30" uuid="65da835e-e2ce-4a9f-8746-2b1fd57fe490"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[ Hora Limite]]></text>
+            </staticText>
+            <line>
+                <reportElement x="490" y="0" width="1" height="60" uuid="5925b263-ebd1-4ee0-ad8f-8c7e25d6066c"/>
+            </line>
+            <line>
+                <reportElement x="-20" y="63" width="595" height="1" uuid="a3ce82d2-e18f-4d3c-b393-0c14afd2a346"/>
+            </line>
+            <staticText>
+                <reportElement x="510" y="15" width="60" height="30" uuid="4bccbd13-db87-420f-b4ee-0102feb52e1a"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Razon Urgencia]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="125" splitType="Stretch">
+            <textField>
+                <reportElement x="50" y="10" width="80" height="30" uuid="7d6d1c44-9586-4aeb-bf83-5972d9de2c37"/>
+                <textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="291" y="10" width="113" height="30" uuid="cb0867f1-6368-40d4-ac3f-a959c72ffde0"/>
+                <textFieldExpression><![CDATA[$F{fechaVencimiento}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="-10" y="10" width="50" height="30" uuid="9af9d264-0171-477e-9965-049f80da507c"/>
+                <textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="144" y="10" width="67" height="30" uuid="02573ebd-71ca-4a85-857f-17b60b1202e2"/>
+                <textFieldExpression><![CDATA[$F{prioridad}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="211" y="10" width="80" height="50" uuid="10713966-eb8d-47e8-a083-984e26cfc462"/>
+                <textFieldExpression><![CDATA[$F{estadoAsString}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="410" y="10" width="70" height="30" uuid="e80c29f3-6508-4c53-b0fc-f2da2d71dd2e"/>
+                <textFieldExpression><![CDATA[$F{horaLimiteAsString}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="480" y="10" width="95" height="30" uuid="6d6ef561-3d3b-444b-b240-80e80006d00d"/>
+                <textFieldExpression><![CDATA[$F{razonUrgencia}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch">
+            <textField>
+                <reportElement x="200" y="20" width="100" height="30" uuid="de720c74-4d25-4cdd-9457-5066d48c1b80"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Página" + $V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement x="300" y="20" width="100" height="30" uuid="6ada7ebc-d477-414d-b1b7-d1f128716c59"/>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="204" y="0" width="153" height="30" uuid="afb88f98-a33a-40a8-9b8e-ff7951a3f8fb"/>
+                <text><![CDATA[ToDoList - Reporte de Tareas]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
 </jasperReport>
