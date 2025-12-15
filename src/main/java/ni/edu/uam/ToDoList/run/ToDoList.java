@@ -3,8 +3,7 @@ package ni.edu.uam.ToDoList.run;
 import org.openxava.util.*;
 
 /**
- * Ejecuta esta clase para arrancar la aplicación.
- *
+ * Ejecuta esta clase para arrancar la aplicación.*
  * Con OpenXava Studio/Eclipse: Botón derecho del ratón > Run As > Java Application
  */
 

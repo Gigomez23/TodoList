@@ -10,6 +10,7 @@
     <field name="prioridad" class="java.lang.Integer"/>
     <field name="estadoAsString" class="java.lang.String"/>
     <field name="intervaloDias" class="java.lang.Integer"/>
+    <field name="titulo" class="java.lang.String"/>
     <!-- Eliminé titulo, color y nombre -->
     <background>
         <band splitType="Stretch"/>
@@ -17,7 +18,7 @@
     <title>
         <band height="85" splitType="Stretch">
             <staticText>
-                <reportElement x="192" y="30" width="170" height="30" uuid="288fcbcd-10e9-4a99-86ba-df98bac79e70">
+                <reportElement x="236" y="30" width="89" height="30" uuid="288fcbcd-10e9-4a99-86ba-df98bac79e70">
                     <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
                 </reportElement>
                 <textElement>
@@ -68,21 +69,21 @@
     <columnHeader>
         <band height="86" splitType="Stretch">
             <staticText>
-                <reportElement x="0" y="26" width="80" height="21" uuid="39c4c7ec-db68-4244-9784-a3ca97de6a11"/>
+                <reportElement x="100" y="25" width="80" height="21" uuid="39c4c7ec-db68-4244-9784-a3ca97de6a11"/>
                 <textElement>
                     <font size="14"/>
                 </textElement>
                 <text><![CDATA[Descripción]]></text>
             </staticText>
             <staticText>
-                <reportElement x="180" y="26" width="70" height="18" uuid="82824d91-e51b-485e-a3a1-2686b2da1005"/>
+                <reportElement x="200" y="26" width="70" height="18" uuid="82824d91-e51b-485e-a3a1-2686b2da1005"/>
                 <textElement>
                     <font size="14"/>
                 </textElement>
                 <text><![CDATA[Prioridad]]></text>
             </staticText>
             <staticText>
-                <reportElement x="270" y="20" width="60" height="30" uuid="cfa43848-1fae-4469-af56-8f5526f945f9"/>
+                <reportElement x="300" y="20" width="52" height="30" uuid="cfa43848-1fae-4469-af56-8f5526f945f9"/>
                 <textElement>
                     <font size="14"/>
                 </textElement>
@@ -95,60 +96,71 @@
                 </graphicElement>
             </line>
             <line>
-                <reportElement x="170" y="8" width="1" height="71" uuid="afcfdc29-2acd-454f-a2e7-4da564df7fa9"/>
+                <reportElement x="192" y="8" width="1" height="71" uuid="afcfdc29-2acd-454f-a2e7-4da564df7fa9"/>
             </line>
             <line>
-                <reportElement x="340" y="6" width="1" height="75" uuid="399a4bc5-05ee-4b39-9a61-8afc4e195894"/>
+                <reportElement x="362" y="8" width="1" height="75" uuid="399a4bc5-05ee-4b39-9a61-8afc4e195894"/>
             </line>
             <line>
                 <reportElement x="-20" y="81" width="595" height="1" uuid="1ee5272e-bc0e-4a8d-b39f-f5169d4bcebe"/>
             </line>
             <line>
-                <reportElement x="260" y="6" width="1" height="75" uuid="2f3786a5-26eb-4691-9868-45cb56552221"/>
+                <reportElement x="280" y="6" width="1" height="75" uuid="2f3786a5-26eb-4691-9868-45cb56552221"/>
             </line>
             <staticText>
-                <reportElement x="349" y="20" width="125" height="30" uuid="eabbdf15-8783-4e22-9e35-158c997a65f6"/>
+                <reportElement x="370" y="20" width="125" height="30" uuid="eabbdf15-8783-4e22-9e35-158c997a65f6"/>
                 <textElement>
                     <font size="14"/>
                 </textElement>
                 <text><![CDATA[FechaVencimiento]]></text>
             </staticText>
             <line>
-                <reportElement x="480" y="4" width="1" height="75" uuid="bb15b9fa-3fd4-4556-a172-e441b13a79ee"/>
+                <reportElement x="500" y="6" width="1" height="75" uuid="bb15b9fa-3fd4-4556-a172-e441b13a79ee"/>
             </line>
             <staticText>
-                <reportElement x="490" y="22" width="80" height="30" uuid="c290be33-7777-4279-a40e-d76d9eefa64e"/>
+                <reportElement x="510" y="20" width="60" height="30" uuid="c290be33-7777-4279-a40e-d76d9eefa64e"/>
                 <textElement>
                     <font size="14"/>
                 </textElement>
                 <text><![CDATA[Intervalo]]></text>
             </staticText>
+            <staticText>
+                <reportElement x="-10" y="28" width="60" height="30" uuid="fd652a7c-2bbe-4fbf-abf7-39b0e734de01"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <text><![CDATA[Titulo]]></text>
+            </staticText>
+            <line>
+                <reportElement x="60" y="6" width="1" height="71" uuid="fd652a7c-2bbe-4fbf-abf7-39b0e734de01"/>
+            </line>
         </band>
     </columnHeader>
     <detail>
         <band height="125" splitType="Stretch">
             <textField>
-                <reportElement x="0" y="10" width="80" height="30" uuid="0ada1486-15c8-44a1-b0da-48a5322bf922"/>
+                <reportElement x="100" y="10" width="80" height="30" uuid="0ada1486-15c8-44a1-b0da-48a5322bf922"/>
                 <textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
             </textField>
-            <textField pattern="dd/MM/yyyy">  <!-- Atributo pattern en textField -->
-                <reportElement x="358" y="10" width="107" height="30" uuid="679abefc-9769-4498-ac67-b668d956f620"/>
-                <textElement>
-                    <font size="12"/>
-                </textElement>
+            <textField>
+                <reportElement x="380" y="10" width="107" height="30" uuid="679abefc-9769-4498-ac67-b668d956f620"/>
                 <textFieldExpression><![CDATA[$F{fechaVencimiento}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="180" y="10" width="65" height="30" uuid="6da4f9e8-96c6-43e4-8e0b-75d085ac245d"/>
+                <reportElement x="203" y="10" width="65" height="30" uuid="6da4f9e8-96c6-43e4-8e0b-75d085ac245d"/>
                 <textFieldExpression><![CDATA[$F{prioridad}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="260" y="10" width="80" height="30" uuid="7decaf37-883d-42fc-a8b1-488d0a1b3514"/>
+                <reportElement x="281" y="10" width="80" height="30" uuid="7decaf37-883d-42fc-a8b1-488d0a1b3514"/>
                 <textFieldExpression><![CDATA[$F{estadoAsString}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="490" y="10" width="70" height="30" uuid="450da80b-97d4-4102-9444-15d01dd145e1"/>
+                <reportElement x="500" y="10" width="70" height="30" uuid="450da80b-97d4-4102-9444-15d01dd145e1"/>
                 <textFieldExpression><![CDATA[$F{intervaloDias}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="-6" y="12" width="66" height="30" uuid="a87f845c-7a8f-4f88-b5c7-ea3ea9860ca3"/>
+                <textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
             </textField>
         </band>
     </detail>
@@ -158,7 +170,21 @@
         <band height="45" splitType="Stretch"/>
     </columnFooter>
     <pageFooter>
-        <band height="54" splitType="Stretch"/>
+        <band height="54" splitType="Stretch">
+            <textField>
+                <reportElement x="200" y="20" width="100" height="30" uuid="de720c74-4d25-4cdd-9457-5066d48c1b80"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Página" + $V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement x="300" y="20" width="100" height="30" uuid="6ada7ebc-d477-414d-b1b7-d1f128716c59"/>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="204" y="0" width="153" height="30" uuid="afb88f98-a33a-40a8-9b8e-ff7951a3f8fb"/>
+                <text><![CDATA[ToDoList - Reporte de Tareas]]></text>
+            </staticText>
+        </band>
     </pageFooter>
     <summary>
         <band height="42" splitType="Stretch"/>
