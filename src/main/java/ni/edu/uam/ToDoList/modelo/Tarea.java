@@ -52,4 +52,9 @@ public abstract class Tarea {
     )
     @ListProperties("nombre, color")
     private List<Etiqueta> etiquetas;
+    public String getEstadoAsString() {
+        return estado != null ? estado.name() : "";
+    }
+
 }
+
